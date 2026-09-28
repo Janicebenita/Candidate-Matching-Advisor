@@ -1,0 +1,9 @@
+spec_version: "0.1.0"
+name: candidate-matching-advisor
+version: 1.0.0
+description: Compares candidate evidence with role criteria and produces transparent match summaries for recruiter review.
+author: Janice Benita F
+runtime:
+  max_turns: 20
+  timeout: 120
+tags: [hr, recruiting, candidate-matching, explainability]
