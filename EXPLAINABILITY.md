@@ -19,3 +19,9 @@ One limitation is that matching cannot establish future performance or cultural 
 ## Uncertainty and Human Review
 
 Uncertainty is shown for missing, inconsistent, or unverifiable claims. Human review is required before shortlisting or any other hiring action.
+
+## Implementation in This Repository
+
+The repository implements a declarative OpenGAP worker through `agent.yaml`, `SOUL.md`, this explainability file, and its `README.md`. The manifest describes the candidate-and-role evidence accepted by the worker and the structured comparison it may return, while the policy files prohibit autonomous hiring decisions.
+
+There is no applicant-tracking integration or trained ranking model in this repository. Execution depends on a compatible host, and every result must retain the cited input evidence, uncertainty, and a human-review requirement.
