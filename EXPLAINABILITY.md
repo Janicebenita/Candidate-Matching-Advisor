@@ -22,6 +22,6 @@ Uncertainty is shown for missing, inconsistent, or unverifiable claims. Human re
 
 ## Implementation in This Repository
 
-The repository implements a declarative OpenGAP worker through `agent.yaml`, `SOUL.md`, this explainability file, and its `README.md`. The manifest describes the candidate-and-role evidence accepted by the worker and the structured comparison it may return, while the policy files prohibit autonomous hiring decisions.
+`agent.py` implements `compare_candidate(role, candidate)`. It normalizes declared role and resume skills, reports matched and missing skills, compares supplied experience years, combines those two transparent components into a score, lists excluded protected fields, reports uncertainty, and requires recruiter review. `test_agent.py` verifies that missing required skills are preserved in the output.
 
-There is no applicant-tracking integration or trained ranking model in this repository. Execution depends on a compatible host, and every result must retain the cited input evidence, uncertainty, and a human-review requirement.
+There is no applicant-tracking integration or trained ranking model. The caller supplies the role and candidate evidence, and the code cannot select or reject anyone.
